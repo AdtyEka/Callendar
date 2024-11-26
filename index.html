@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender Kegiatan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kalender Kegiatan</h1>
+        </div>
+        <div class="year-selector">
+            <select id="yearSelect"></select>
+        </div>
+        <div id="calendar" class="calendar"></div>
+    </div>
+
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <h2>Tambah Kegiatan</h2>
+            <div class="form-group">
+                <label>Tanggal:</label>
+                <input type="text" id="eventDate" readonly>
+            </div>
+            <div class="form-group">
+                <label>Judul Kegiatan:</label>
+                <input type="text" id="eventTitle">
+            </div>
+            <div class="form-group">
+                <label>Deskripsi:</label>
+                <textarea id="eventDescription"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Nomor WhatsApp:</label>
+                <input type="tel" id="whatsappNumber" value="0815-7556-7315">
+            </div>
+            <button class="button" onclick="saveEvent()">Simpan</button>
+            <button class="button" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+    
+    <div class="year-month-selector">
+        <select id="yearSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">29</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+        <select id="monthSelect">
+            <option value="0">Januari</option>
+            <option value="1">Februari</option>
+            <option value="2">Maret</option>
+            <option value="3">April</option>
+            <option value="4">Mei</option>
+            <option value="5">Juni</option>
+            <option value="6">Juli</option>
+            <option value="7">Agustus</option>
+            <option value="8">September</option>
+            <option value="9">Oktober</option>
+            <option value="10">November</option>
+            <option value="11">Desember</option>
+        </select>
+    </div>
+    
+    <script src="holidays.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>
